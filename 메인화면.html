@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>상품페이지</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      header {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 70px;
+      }
+      .on{
+        text-decoration: none ;
+      }
+
+      .white-section,
+      .gray-section {
+        display: flex;
+        align-items: center;
+        padding: 5px 35px;
+        position: relative;
+      }
+
+      .white-section {
+        background-color: #ffffff;
+        border-bottom: 1px solid #cccccc;
+        height: 35px;
+        
+      }
+      .white-section button-group{
+        justify-content: right;
+      }
+
+      .gray-section {
+        background-color: #cccccc;
+        height: 35px;
+      }
+
+        .logo img {
+        width: auto;
+        height: auto;
+        max-width: 200%;
+        max-height: 200%;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        bottom: 0;
+        transform: translateY(-25%);
+        z-index: 2;
+        margin-left: 12px;
+        }
+
+      .title {
+        flex-grow: 1;
+        margin-left: 200px;
+      }
+      .title h3{
+        color: rgb(255,125,0);
+        font-size: 22px;
+      }
+      .title h3:hover{
+        color: rgb(230,0,18);
+      }
+
+      .button-group {
+        margin-right: 20px;
+      }
+      .button-group a {
+        text-decoration: none;
+        color: gray;
+      }
+
+      .gray-section p {
+        margin-left: 200px;
+      }
+
+      .search-box {
+        margin-left: auto;
+        margin-right: 20px;
+        position: relative;
+      }
+      .search-box input {
+        border-radius: 5px;
+        border: 2px solid gray;
+        height: 20px;
+      }
+      .search-box button {
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        z-index: 3;
+        left: 145px;
+        top: 6px;
+      }
+
+      .right h3 {
+        color: rgb(255,125,0);
+      }
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .main-section {
+        display: flex;
+        /* padding: 20px; */
+        
+      }
+      .main-section h1{
+        font-size: 45px;
+        margin-left: 20px;
+        margin-top: 30px;
+      }
+
+      .main-image {
+        width: 100%;
+        max-width: 1000px;
+        margin-right: 20px;
+        margin-left: 20px;
+      }
+      .main-section p,strong, h2{
+        margin-left: 20px;
+        font-size: 24px;
+      }
+      .left h3{
+        font-size: 24px;
+        margin-left: 20px;
+      }
+      .left ul{
+        font-size: 14px;
+      }
+      section {
+        flex: 50%;
+        background-color: rgb(242, 242, 242);
+        margin: 0;
+      }
+      section p {
+        margin-left: 20px;
+      }
+      .left {
+        background-color: rgb(242, 242, 242);
+      }
+      .right {
+        background-color: white;
+      }
+      .article-box {
+        background-color: rgb(225,225,225); 
+        padding: 10px; 
+        display: flex; 
+        align-items: center; 
+        height: auto; 
+        margin: 0 10px;
+      }
+      .article-box h2{
+        font-size: calc(16px + 1vw);
+      }
+
+      .article-box p {
+        margin-right: 10px;
+        line-height: 2;
+      }
+      
+
+      aside {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        color: rgb(255,125,0);
+      }
+      aside p,
+      label {
+        color: black;
+        font-size: 16px;
+        text-align: left;
+        margin-left: 20px;
+      }
+      aside h1{
+        margin-top: 60px;
+        text-align: right;
+        font-size: 30px;
+      }
+      aside button {
+        width: 190px;
+        height: 60px;
+        background-color: rgb(255,125,0);
+        border: none;
+        color: white;
+        font-size: 30px
+      }
+
+      .footer {
+        background-color: rgb(141,141,141);
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .footer ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .footer li {
+        display: inline;
+        margin-right: 10px;
+      }
+
+      .footer a {
+        color: #fff;
+        text-decoration: none;
+      }
+      @media screen and (max-width: 900px) {
+        .main-section {
+          flex-direction: column;
+        }
+
+        .left,
+        .right {
+          width: 100%;
+          margin: 0;
+        }
+
+        .right {
+          order: 2; /* aside를 main-section 아래로 이동 */
+        }
+      }
+
+    </style>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="white-section">
+        <a href="로그인.html">
+        <div class="logo">
+          <img src="logo4.png" alt="로고" />
+        </div>
+        </a>
+          <div class="title">
+            <a href="메인화면.html" class="on">
+            <h3>온라인 스토어</h3>
+          </a>
+          </div>
+        
+        <div class="button-group">
+          <a href="로그인.html">로그인/가입</a>
+        </div>
+      </div>
+      <div class="gray-section">
+        <p>도움말</p>
+        <div class="search-box">
+          <input type="text" placeholder="검색" />
+          <button><i class="bx bx-search-alt-2"></i></button>
+        </div>
+      </div>
+    </header>
+
+    <div class="main-section">
+      <section class="left">
+        <h1>Super Mario Bros. Wonder</h1>
+        <img src="mario.jpg" alt="메인 이미지" class="main-image" />
+        <br>
+        <strong>마리오와 동료들이 원더의 세계로</strong>
+        <p>
+          「슈퍼 마리오브라더스」시리즈, 약 11년 만의 완전 신작이 Nintendo Switch로 등장. 쿠파에 납치된 「플라워 왕국」을 구하기 위해 마리오와 동료들이 적과 장치를 돌파하면서 골을 향해 달려갑니다.<br>
+          <br>
+        ◆신기한 변화「원더」<br>
+        새롭게 등장하는 아이템 「원더플라워」에 닿으면, 코스가 크게 변화. 토관이 움직이거나 적의 군단이 출현하거나, 다른 모습으로 변신하거나... 코스마다 다른 놀라움과 설렘이 기다리고 있습니다.<br>
+        <br>
+        ◆좋아하는 캐릭터로 모험<br>
+        마리오나 루이지, 키노피오는 물론, 피치나 데이지, 키노피코 등 시리즈 최다의 12종류의 캐릭터가 조작 가능. 요시와 톳텐은 데미지를 받지 않으므로 액션 게임을 잘 못하는 분도 안심할 수 있습니다.<br>
+        <br>
+        ◆마리오와 동료들이 코끼리로 대변신<br>
+        새로운 파워업 「코끼리마리오」는 큰 몸집과 긴 코를 활용한 액션코스 전체를 달립니다. 그 외에도 「거품마리오」나 「드릴마리오」가 새롭게 등장. 마리오들은 특별한 능력을 가진 새로운 모습으로 활약합니다.<br>
+        <br>
+        ◆배지로 펼쳐지는 다채로운 액션<br>
+        모험을 진행시키면 입수되는 「배지」는 성능이나 액션을 변경가능한 특수한 효과를 갖고 있습니다. 모자를 사용하여 활공하거나, 덩굴을 발사하여 벽에 붙거나 코스의 특성이나 자신의 취향에 맞게 능력을 커스터마이즈 할 수 있습니다.<br>
+        <br>
+        ◆다같이 함께 플레이<br>
+        Joy-Con을 나눔 플레이하면 최대 4명 플레이 가능. 다양한 조합으로 모험을 즐길 수 있습니다. 온라인에 접속하면 동시간에 세계의 어딘가에서 모험하는 플레이어가 코스나 월드맵에 희미한 모습으로 출현. 다른 세계에 있으면서도 인사하고, 실수한 상대를 구하거나 아이템을 나누는 등 서로 도와가며 함께 모험할 수 있습니다.<br>
+        <br>
+        ※메이커로부터의 설명입니다.
+        </p>
+        <br />
+        <h2>메이커로부터의 알림</h2>
+        <p>
+          ○ 온라인 플레이에 대하여<br>
+          ・코스 내에서는 최대 4명, 월드맵은 최대 12명까지 접속 가능합니다.<br>
+          ・온라인 플레이에서는 나눔플레이와 플레이 방법이 다릅니다.<br>
+          ・1대의 Nintendo Switch에 2명까지 참가 가능합니다.<br>
+          <br>
+          ○ 플레이 모드에 따라 플레이 인원수가 다릅니다.<br>
+          ・TV 모드：1～4명<br>
+          ・테이블 모드：1～4명<br>
+          ・휴대 모드：1명<br>
+        </p>
+        <article class="article-box">
+          <div>
+            <p>대응 기종: 
+              Nintendo Switch<br>
+              장르: 
+              액션<br>
+              발매일: 
+              2023. 10. 20.<br>
+              메이커: 
+              한국닌텐도<br>
+              플레이 인원수: 
+              1~4명
+            </p>
+          </div>
+          <div>
+            <p>인터넷 통신 플레이 인원수: 
+              1~4명<br>
+              대응언어: 
+              한국어, 영어, 스페인어, 프랑스어, 독일어,<br> 이태리어, 네덜란드어, 포르투갈어, 러시아어,<br> 일본어, 중국어<br>
+              대응 컨트롤러: 
+              Nintendo Switch Pro 컨트롤러<br>
+              플레이 모드: 
+              TV 모드, 테이블 모드, 휴대 모드
+            </p>
+          </div>
+        </article>
+        <h3>유의사항</h3>
+        <ul>
+          <li>Nintendo Switch의 다운로드 번호는 Nintendo Switch의 닌텐도 e숍에서만 사용 가능합니다.</li>
+          <li>닌텐도 3DS의 다운로드 번호는 닌텐도 3DS 시리즈의 닌텐도 e숍에서만 사용 가능합니다.</li>
+          <li>전화번호의 잘못된 기입, 잘못된 주문으로 발생하는 모든 문제에 대한 책임은 고객에게 있으므로 연락처 기입시에 유의해 주시기 바랍니다.</li>
+          <li>한국닌텐도 홈페이지에서 구입한 소프트웨어, 추가 콘텐츠, 체험판 등의 다운로드 번호로 해당 콘텐츠를 이용할 수 있습니다.</li>
+          <li>소프트웨어에 대한 이용 등급 및 상세 정보는 홈페이지를 참고해 주시기 바랍니다.</li>
+          <li>본 다운로드 번호는 전송 후 90일간만 유효합니다. 사용 기한에 유의해 주시기 바랍니다.</li>
+          <li>본 다운로드 번호의 사용에는 Nintendo Switch 게임기 및 다운로드를 위한 인터넷 환경이 반드시 필요합니다.</li>
+          <li>구매하신 콘텐츠를 「지금 다운로드」로 다운로드 받은 후에는 재화의 가치가 현저히 감소하기 때문에 환불이 불가능합니다.</li>
+          <li>단, 예외 상품이 있으므로 각 상품의 상세 내용을 반드시 확인해 주시기 바랍니다.</li>
+        </ul>
+      </section>
+      <aside class="right">
+        <h1>₩ 64,800</h1>
+        <label
+          ><input type="checkbox" name="check" value="check" />다운로드 구입에 관한 주의 사항을 확인했습니다. <br>
+          (다운로드 상품은 실물로 배송되지 않는 상품입니다.)<br>
+          <br>
+          ・Nintendo Switch 소프트웨어를 다운로드하기 위해서는 국가/지역이 대한민국인 18세 이상의 [닌텐도 어카운트] 가 필요합니다.<br>
+          <br>
+          ・다운로드 상품의 경우 구매하신 닌텐도 어카운트로 [지금 다운로드]를 클릭하면 해당 콘텐츠가 구매하신 닌텐도 어카운트로 다운로드됩니다. 다운로드 번호로는 전송되지 않으며, [지금 다운로드] 후에는 환불이 불가능합니다.<br>
+          <br>
+          ・해당 페이지에서 구입하신 다운로드 상품은 양도가 불가하며, 구입하신 계정에서만 사용이 가능합니다.</label
+        >
+        <br />
+        <button>상품구매</button>
+      </aside>
+    </div>
+
+    <footer class="footer">
+      <nav>
+        <ul>
+          <li><a href="로그인2.html">로그인</a></li>
+          <li><a href="가입.html">회원가입</a></li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>
